@@ -16,10 +16,12 @@
 
 *{
     box-sizing: border-box;
+    /* 패딩과 보더 포함 크기지정 : width, height을 정확하게 파악하기 위해서 사용 */
 }
 
 body{
     font-family: 'Nanum Gothic',sans-serif;
+    margin: 0;
 }
 
 h1,
@@ -37,7 +39,7 @@ ul{
 
 a{
     text-decoration: none;
-    color: var(--color-primary);
+    color: var(--color-text);
 }
 
 button{
@@ -48,4 +50,48 @@ button{
 
 button:focus{
     outline: 1px solid var(--color-accent);
+}
+
+.header{
+    background-color: black;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+} 
+
+.header__logo{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.header__logo__img{
+    width: 36px;
+    height: 36px;
+}
+
+.header__logo__title{
+    font-size: 1.8rem;
+}
+
+.header__menu{
+    display: flex;
+    gap: 4px;
+}
+
+.header__menu__item{
+    padding: 8px 16px;
+}
+
+.header__menu__item:hover{
+    border-bottom: 1px solid var(--color-accent);
+}
+
+.header__menu__item.active{
+    border: 1px solid var(--color-accent);
+    border-radius: 4px;
 }
