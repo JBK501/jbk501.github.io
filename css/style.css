@@ -429,7 +429,7 @@ button:focus {
 
 /* Arrow-up */
 .arrow-up {
-  background-color: var(--color-primary);
+  background-color: transparent;
   position: fixed;
   bottom: 3rem;
   right: 3rem;
@@ -441,6 +441,11 @@ button:focus {
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: all 300ms ease-in;
+}
+
+.arrow--fadein {
+  background-color: var(--color-primary);
   box-shadow: 5px 5px 0px 0px var(--color-accent);
 }
 
