@@ -68,3 +68,33 @@ document.addEventListener("scroll", () => {
     arrowUp.classList.remove("arrow--fadein");
   }
 });
+
+//---------------------------------------
+// NavBar 토글버튼 처리
+
+/*
+1. 화면크기가 768px보다 작아질때, 
+ 1.1. 헤더 메뉴를 투명하게 처리한다. 
+ 1.2. 헤더에 토글버튼을 표시한다. 
+2. 토글버튼을 클릭했을 때
+ 2.1. 헤더 메뉴의 배경의 투명도를 없앤다. 
+ 2.2. 헤더 메뉴를 표시한다. 
+3. 메뉴에서 버튼을 클릭했을 때
+ 3.1. 헤더 메뉴를 투명하게 처리한다. 
+*/
+
+const navbarMenu = document.querySelector(".header__menu");
+const navbarToggle = document.querySelector(".header__toggle");
+
+navbarToggle.addEventListener("click", () => {
+  navbarMenu.classList.toggle("open");
+});
+
+//[자바스크립트 개념]
+// classList.toggle() : 매개변수에 해당하는 데이터가 있다면 추가, 없다면 제거 (on & off)
+// 여기서는 navbarMenu에 open클래스가 있다면 없애고, 있다면 추가한다.
+
+// NavBar 메뉴클릭시, 메뉴를 자동으로 닫아줌.
+navbarMenu.addEventListener("click", () => {
+  navbarMenu.classList.remove("open");
+});
