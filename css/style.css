@@ -1,3 +1,4 @@
+/* 패딩은 컨텐츠 크기에 영향을 주고, 마진은 컨텐츠 간격에 영향을 준다. */
 :root {
   /* App Colors */
   --color-primary: var(--color-black);
@@ -79,7 +80,7 @@ button:focus {
 
 /* Header */
 .header {
-  background-color: #050a13;
+  background-color: transparent;
   position: fixed;
   top: 0;
   width: 100%;
@@ -88,6 +89,12 @@ button:focus {
   justify-content: space-between;
   align-items: center;
   z-index: 1;
+  transition: all 300ms ease;
+}
+
+.header--dark {
+  background-color: var(--color-primary);
+  box-shadow: var(--color-accent) 0px 3px 8px;
 }
 
 .header__logo {
@@ -135,7 +142,7 @@ button:focus {
 .home__avatar {
   width: 250px;
   height: 250px;
-  object-fit: cover;
+  object-fit: cover; /* 컨텐츠의 가로세로 비율을 유지한다. */
   border-radius: 100%;
   border: 3px solid var(--color-accent);
 }
@@ -154,7 +161,7 @@ button:focus {
 }
 
 .home__contact {
-  display: inline-block;
+  display: inline-block; /* a태그는 인라인 요소임. 따라서 마진을 주더라도, 양사이드로 밖에 안들어감. 따라서 인라인 블럭으로 변경함. */
   background-color: var(--color-accent);
   color: var(--color-black);
   margin: 2rem;
@@ -430,7 +437,7 @@ button:focus {
   width: 4.5rem;
   height: 4.5rem;
   border-radius: 100%;
-  /* text-align: center; */
+  text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
