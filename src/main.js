@@ -1,3 +1,5 @@
+"use strict"; // 순수자바스크립트 사용할 때 사용한다.
+
 //---------------------------------------
 // 페이지 아래 스크롤시,Header에 다크스타일링을 적용한다.
 // <힌트>
@@ -98,3 +100,5 @@ navbarToggle.addEventListener("click", () => {
 navbarMenu.addEventListener("click", () => {
   navbarMenu.classList.remove("open");
 });
+
+//---------------------------------------
