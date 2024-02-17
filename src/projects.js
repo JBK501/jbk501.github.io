@@ -18,8 +18,9 @@
 const categories = document.querySelector(".categories");
 const projects = document.querySelectorAll(".project");
 const projectsContainer = document.querySelector(".projects");
+
 categories.addEventListener("click", (event) => {
-  const filter = event.target.dataset.category;
+  const filter = event.target.dataset.category; // 카테고리 목록->클릭한 버튼->커스텀데이터
   if (filter == null) {
     return;
   }
@@ -55,13 +56,28 @@ function FilterProjects(filter) {
 /*
 [자바스크립트 개념]
 querySelectorAll : 해당 선택자에 매칭되는 모든 요소들을 가져온다.
+-> 여기서는 순회해서 데이터를 가져오면서, 카테고리 커스텀데이터와 비교해야하기 때문에 사용했음. 
 
-(event) : 콜백함수에 이벤트가 발생하면, 해당 이벤트에 해당하는 객체를 전달한다.
+(event) : 콜백함수에 이벤트가 발생하면, 해당 이벤트에 해당하는 객체를 첫번째 인자에 전달한다.
 target : 클릭이된 html요소가 나온다.
-target.dataset : html에서 추가한 데이터
+target.dataset : html에서 추가한 커스텀데이터
 
 setTimeout() : 지정한 시간 이후에, 원하는 함수를 실행한다. 
 
 콜백함수 수행개념
 코드들이 전부 수행이 된후, 브라우저에 한번에 업데이트 된다. 
+*/
+
+//---------------------------------------
+// 현재 보여지는 Section별로 Active메뉴를 설정한다.
+// Item, 화살표 클릭 시 자연스러운 화면 스크롤링
+
+/*
+[자바스크립트 개념]
+<InterSectionObserver연습파일 참고.
+
+
+
+
+
 */
