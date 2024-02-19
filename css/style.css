@@ -23,6 +23,10 @@
   /* 패딩과 보더 포함 크기지정 : width, height을 정확하게 파악하기 위해서 사용 */
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Nanum Gothic", sans-serif;
   margin: 0;
