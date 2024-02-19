@@ -59,8 +59,8 @@ function observerCallback(entries) {
   SelectNavItem(navIndex);
 }
 
-function findIntersecting(intersections) {
-  const index = intersections.indexOf(true);
+function findIntersecting(visibleSections) {
+  const index = visibleSections.indexOf(true);
   return index >= 0 ? index : 0;
 }
 
